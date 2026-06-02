@@ -263,6 +263,7 @@ else if($confirmDsp == 1){
 <meta name="format-detection" content="telephone=no">
 <title>確認画面</title>
 <!-- ↓ これを追加 -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 <link rel="stylesheet" href="css/style.css">
 /* もともとのスタイル */
 <style type="text/css">
@@ -388,6 +389,7 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 <meta name="format-detection" content="telephone=no">
 <title>完了画面</title>
 <!-- ↓ これを追加 -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 <link rel="stylesheet" href="css/style.css">
 <style type="text/css">
 /* 既存のスタイル... */
