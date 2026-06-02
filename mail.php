@@ -264,10 +264,14 @@ else if($confirmDsp == 1){
 <title>確認画面</title>
 <!-- ↓ これを追加 -->
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/responsive.css">
-<style type="text/css">
 /* もともとのスタイル */
 <style type="text/css">
+/* 既存のスタイル... */
+
+/* ヘッダーリンク色を上書き */
+header a {
+    color: #fff !important;
+}
 /* 自由に編集下さい */	
 #formWrap {
 	width:700px;
@@ -383,8 +387,14 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 <title>完了画面</title>
 <!-- ↓ これを追加 -->
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/responsive.css">
+<style type="text/css">
+/* 既存のスタイル... */
 
+/* ヘッダーリンク色を上書き */
+header a {
+    color: #fff !important;
+}
+</style>
         <div class="header-contents">
             <div class="garland">
                 <img class="garland-left" src="images/garland-l.png" alt="装飾画像">
