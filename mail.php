@@ -381,6 +381,28 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 <meta name="format-detection" content="telephone=no">
 <title>完了画面</title>
+<!-- ↓ これを追加 -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+        <div class="header-contents">
+            <div class="garland">
+                <img class="garland-left" src="images/garland-l.png" alt="装飾画像">
+                <img class="garland-right" src="images/garland-r.png" alt="装飾画像">
+            </div>
+            <nav id="head">
+                <!-- ヘッダーリンク -->
+                <ul>
+                    <li><a href="tag-alllist.html"><span class="header-link">Tags</span><br><span class="header-link-sub">タグから探す</span></a></li>
+                    <li><a href="index.html#map"><span class="header-link">Map</span><br><span class="header-link-sub">マップから探す</span></a></li>
+                    <li><a href="index.html"><span class="header-link">Cafe Map</span></a></li>
+                    <li><a href="about.html"><span class="header-link">About</span><br><span class="header-link-sub">このサイトについて</span></a></li>
+                    <li><a href="contact.html"><span class="header-link">Contact</span><br><span class="header-link-sub">お問い合わせ</span></a></li>
+            
+                </ul>
+            </nav>
+        </div>
+
 </head>
 <body>
 <div align="center">
