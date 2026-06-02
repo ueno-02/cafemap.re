@@ -324,6 +324,9 @@ input[type="submit"], input[type="reset"], input[type="button"] {
 }
 </style>
 
+</head>
+<body>
+	    <header>
         <div class="header-contents">
             <div class="garland">
                 <img class="garland-left" src="images/garland-l.png" alt="装飾画像">
@@ -342,8 +345,6 @@ input[type="submit"], input[type="reset"], input[type="button"] {
             </nav>
         </div>
 
-</head>
-<body>
 
 <!-- ▲ Headerやその他コンテンツなど　※自由に編集可 ▲-->
 
@@ -401,6 +402,10 @@ header a:visited {
     color: #fff !important;
 }
 </style>
+
+</head>
+<body>
+<header>
         <div class="header-contents">
             <div class="garland">
                 <img class="garland-left" src="images/garland-l.png" alt="装飾画像">
@@ -418,9 +423,7 @@ header a:visited {
                 </ul>
             </nav>
         </div>
-
-</head>
-<body>
+</header>
 <div align="center">
 <?php if($empty_flag == 1){ ?>
 <h4>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</h4>
