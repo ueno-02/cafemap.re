@@ -262,8 +262,13 @@ else if($confirmDsp == 1){
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 <meta name="format-detection" content="telephone=no">
 <title>確認画面</title>
+<!-- ↓ これを追加 -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
 <style type="text/css">
-/* 自由に編集下さい */
+/* もともとのスタイル */
+<style type="text/css">
+/* 自由に編集下さい */	
 #formWrap {
 	width:700px;
 	margin:0 auto;
@@ -311,6 +316,25 @@ input[type="submit"], input[type="reset"], input[type="button"] {
 }
 }
 </style>
+
+        <div class="header-contents">
+            <div class="garland">
+                <img class="garland-left" src="images/garland-l.png" alt="装飾画像">
+                <img class="garland-right" src="images/garland-r.png" alt="装飾画像">
+            </div>
+            <nav id="head">
+                <!-- ヘッダーリンク -->
+                <ul>
+                    <li><a href="tag-alllist.html"><span class="header-link">Tags</span><br><span class="header-link-sub">タグから探す</span></a></li>
+                    <li><a href="index.html#map"><span class="header-link">Map</span><br><span class="header-link-sub">マップから探す</span></a></li>
+                    <li><a href="index.html"><span class="header-link">Cafe Map</span></a></li>
+                    <li><a href="about.html"><span class="header-link">About</span><br><span class="header-link-sub">このサイトについて</span></a></li>
+                    <li><a href="contact.html"><span class="header-link">Contact</span><br><span class="header-link-sub">お問い合わせ</span></a></li>
+            
+                </ul>
+            </nav>
+        </div>
+
 </head>
 <body>
 
@@ -372,6 +396,11 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 送信は正常に完了しました。<br /><br />
 <a href="<?php echo $site_top ;?>">トップページへ戻る&raquo;</a>
 </div>
+
+<footer>
+    <p>&copy; 2026 Cafe Map. All rights reserved.</p>
+</footer>
+
 <?php copyright(); ?>
 <!--  CV率を計測する場合ここにAnalyticsコードを貼り付け -->
 </body>
