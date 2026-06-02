@@ -1,0 +1,640 @@
+@charset "UTF-8";
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+    background-color: #bba798;
+    list-style: none;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+a:hover {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+ 
+
+/* googleフォント */
+.line-seed-jp-regular {
+  font-family: "LINE Seed JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pinyon-script-regular {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.zen-kaku-gothic-new-regular {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inria-serif-light {
+  font-family: "Inria Serif", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.inria-serif-regular {
+  font-family: "Inria Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inria-serif-bold {
+  font-family: "Inria Serif", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.inria-serif-light-italic {
+  font-family: "Inria Serif", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.inria-serif-regular-italic {
+  font-family: "Inria Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.inria-serif-bold-italic {
+  font-family: "Inria Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+
+/* header要素 */
+header .header-contents {
+    position: relative;
+}
+
+#head ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+    text-align: center;
+}
+
+/* 共通 */
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+/* ヘッダーリンク */
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+#head ul .header-link {
+    font-size: 2rem;
+    font-family: "Inria Serif", serif;
+    text-align: center;
+}
+
+
+/* ヘッダーリンクの下の文 */
+#head ul .header-link-sub {
+    font-size: 0.9rem;
+}
+
+/* ガーランド装飾 */
+.garland img {
+    position: absolute;
+    top: 0;
+    width: 8%;
+    height: auto;
+    vertical-align: bottom;
+}
+.garland-left,.garland-right {
+    top: 0;
+    z-index: 5;
+}
+
+.garland-left {
+    left: 0;
+}
+
+.garland-right {
+    right: 0;
+}
+
+/* ヘッダー画像 */
+.js {
+    position: relative;
+}
+
+#slider {
+    width: 100%;
+    height: 100vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+    height: calc(100vh - 58px);
+    object-fit: cover;
+}
+/* ヘッダー画像のテキスト */
+.js .text {
+    position: absolute;
+    color: #fff;
+    font-family: "Pinyon Script", cursive;
+    font-size: 7rem;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-shadow: 2px 2px 4px gray;
+}
+nav#head {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 10%;
+}
+
+/* ページの装飾画像 */
+/* いちご */
+.strawberry {
+    position: absolute;
+    bottom: -100%;
+}
+
+/* 鳥 */
+.bird-left {
+    position: absolute;
+    left: 85%;
+    bottom: -35%;
+}
+
+
+/* aboutページ *--->
+/* 見出しリボン */
+    /* 文字  */
+.ribbon-header {
+  position: relative;
+  display: block;
+  margin: 200px auto 50px;
+  height: 60px;
+  width: 600px;
+  min-width: 300px;
+  line-height: 60px;
+  padding: 0 30px;
+  font-size: 2.5rem;
+  background: #BB675E;
+  color: #FFF;
+  font-family: "Inria Serif", serif;
+  text-align: center;
+}
+
+.ribbon-header::before, .ribbon-header::after {
+  position: absolute;
+  content: '';
+  width: 0px;
+  height: 0px;
+  z-index: 1;
+}
+
+.ribbon-header::before {
+  top: 0;
+  left: 0;
+  border-width: 30px 0px 30px 15px;
+  border-color: transparent transparent transparent #bba798;
+  border-style: solid;
+}
+
+.ribbon-header::after {
+  top: 0;
+  right: 0;
+  border-width: 30px 15px 30px 0px;
+  border-color: transparent #bba798 transparent transparent;
+  border-style: solid;
+}
+
+.ribbon-header a {
+    text-decoration: none;
+    color: #FFF;
+}
+/* aboutページの画像 */
+
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+
+/* aboutテキスト */
+.about-h2 {
+    position: absolute;
+    bottom: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+
+/* もっとみる */
+.about-link {
+    position: absolute;
+    text-decoration: none;
+    bottom: 45%;
+    left: 44%;
+    margin: 1.5em 0;
+    padding: 0 5px;
+    width: 200px;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    color: #FFF;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: #BB675E;
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow: 0 5px 0 #9e5d56;
+}
+
+.about-link:before {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top: 15px solid #BB675E;
+  z-index: 0;
+}
+
+/* abouテキスト */
+.about-p1 {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.about-p2 {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* map */
+.map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* googlemap */
+.map-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 5px solid #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #0000001a;
+}
+
+/* mapのiframeの設定 */
+.map-wrapper iframe {
+    width: 100%;
+    height: 770px;
+    position: absolute;
+    top: -70px;       /* 上に70pxずらす */
+    /* left: 0; */
+    border: none;
+}
+
+
+
+/* tag */
+
+.tag {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.tag-h1 {
+    position: relative;
+}
+.tagimage img {
+    position: absolute;
+    top: -190px;
+    right: -220px;
+}
+
+.tag-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  gap: 40px;
+}
+
+.tag-text .tag-text-left {
+    flex-direction: row-reverse;
+}
+
+.tag-img {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.tag-cap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    text-align: left;
+}
+
+.tag-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.tags {
+  position: relative;/*相対位置*/
+  padding-left: 1.5em;/*アイコン分のスペース*/
+  line-height: 1.4;/*行高*/
+  color: #3A281B;/*文字色*/
+  font-family: "Pinyon Script", cursive;
+  font-weight: 900;
+  font-size: 6rem;
+  margin: 0;
+  align-content: center;
+}
+
+.tags:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f1b0";/*アイコンのユニコード*/
+  font-weight: 900;
+  position: absolute;/*絶対位置*/
+  font-size: 1em;/*サイズ*/
+  left: 0;/*アイコンの位置*/
+  top: 0;/*アイコンの位置*/
+  color: #69594B; /*アイコン色*/
+}
+
+.hd {
+    font-size: 2rem;
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1em;
+    color: #3A281B;
+    margin: 0;
+    padding-top: 35px;
+}
+.hd:before {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  display: inline-block;
+  width: 60px;
+  height: 5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #3A281B;
+  border-radius: 2px;
+}
+
+.brief {
+    font-size: 1.5rem;
+    margin: 0;
+    padding-top: 30px;
+}
+
+/* tagのリンク */
+.tag-h3 a{
+    position: absolute;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    padding: 7px 0;
+    font-size: 18px;
+    background: #69594B;
+    padding: 0 30px;
+    margin-left: 50px;
+    box-shadow: 0 4px 0 #463b33;
+}
+
+.tag-h3 a::before {
+  position: absolute;
+  content: '';
+  width: 0px;
+  height: 0px;
+  z-index: 1;
+}
+
+.tag-h3 a::before {
+  top: -2px;
+  left: -2px;
+  border-width: 32px 0px 32px 15px;
+  border-color: transparent transparent transparent #bba798;
+  border-style: solid;
+}
+
+/* alllist */
+.all-list-link {
+  position: relative;
+  display: block;
+  margin: 200px auto 50px;
+  height: 60px;
+  width: 300px;
+  min-width: 300px;
+  line-height: 60px;
+  padding: 0 30px;
+  font-size: 2.5rem;
+  background: #BB675E;
+  color: #FFF;
+  font-family: "Inria Serif", serif;
+  text-align: center;
+  box-shadow: 0 5px 0 #9e5d56;
+
+}
+
+.all-list-link::before, .all-list-link::after {
+  position: absolute;
+  content: '';
+  width: 0px;
+  height: 0px;
+  z-index: 1;
+}
+
+.all-list-link::before {
+  top: 0;
+  left: 0;
+  border-width: 30px 0px 30px 15px;
+  border-color: transparent transparent transparent #bba798;
+  border-style: solid;
+}
+
+/* なぜか反映しない後で治す */
+.all-list-link:hover span {
+	background-color: #333;
+	color: #fff;
+	transform: translateY(4px);
+}
+
+/* alllistのatag */
+.all-list-link a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.all-list-link a:hover {
+  transform: translateY(5px);
+  box-shadow: none;
+}
+
+/* 1. 背景スクロール禁止：ICS Media推奨の最新手法 */
+body:has(dialog[open]) {
+    overflow: hidden;
+    scrollbar-gutter: stable;
+     /* スクロールバー消失によるガタつきを防止 */
+}
+
+/* アヒルのボタン（ピン）から余計な四角い背景と枠を消す */
+.pin-button {
+    background: none;      /* 背景色を消去 */
+    border: none;          /* 枠線を消去 */
+    padding: 0;            /* 内余白を消去 */
+    cursor: pointer;       /* マウスカーソルを指の形に */
+    outline: none;         /* クリック時の青い枠線を消去 */
+}
+
+.pin-button img {
+    width: 100px;          /* 必要に応じてサイズ調整（現在は画像サイズ依存） */
+    display: block;
+}
+
+.pin-button:hover {
+    opacity: 0.8;          /* ホバー時に少し薄くして「押せる」ことを伝える */
+}
+
+/* 2. ポップアップ（dialog要素）の設計 */
+dialog.popup {
+
+    background-color: #fff; 
+    border: none;
+    padding: 0;
+
+    /* 背景画像 */
+    background-image: url('../images/back-ground.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* サイズ設定 */
+    max-width: 800px;
+    width: 90%;
+    aspect-ratio: auto;
+    
+    /* 
+       ブラウザが自動で中央配置するため、
+       top/left/transformなどは一切不要 
+    */
+    /* UIコンサル視点：柔らかく深い影 */
+    /* box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);  */
+
+    filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.3));
+}
+
+/* 3. 背景（オーバーレイ）の設計 */
+dialog.popup::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px); /* 背後をぼかして視認性を向上 */
+}
+
+/* 4. 閉じるボタン：アクセシビリティを考慮 */
+.close-button {
+    position: sticky;
+    top: 15px;
+    left: calc(100% - 45px); /* 右上に配置 */
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.close-button:hover {
+    background-color: #ff4d4d;
+    color: white;
+    border-color: #ff4d4d;
+}
+
+dialog.popup > .content {
+    padding: 30px;
+    text-align: center;
+}
+
+/* 「リストに戻る」ボタンのデザイン改善 */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f0f0f0; /* 控えめなグレー */
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.back-link:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-1px); /* 押しやすさを視覚的にフィードバック */
+}
+
+.back-link::before {
+    content: "← "; /* 戻る記号を付与して直感的に */
+}
+
+/* pc表示 */
+@media (min-width: 768px) {
+    /* ヘッダーリンクホバー */
+    header a:hover {
+
+    }
+}
