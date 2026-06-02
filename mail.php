@@ -269,7 +269,9 @@ else if($confirmDsp == 1){
 /* 既存のスタイル... */
 
 /* ヘッダーリンク色を上書き */
-header a {
+header a,
+header a:link,
+header a:visited {
     color: #fff !important;
 }
 /* 自由に編集下さい */	
@@ -391,7 +393,9 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 /* 既存のスタイル... */
 
 /* ヘッダーリンク色を上書き */
-header a {
+header a,
+header a:link,
+header a:visited {
     color: #fff !important;
 }
 </style>
