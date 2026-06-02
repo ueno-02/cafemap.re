@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cafe Map</title>
+    <!-- 「パンくずリスト」をGoogleに正しく伝えるためのコード -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+    <!-- URLを書き換える -->
+        "item": "https://example.com/index.html" 
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tags",
+        "item": "https://example.com/tags.html"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Chill"
+      }]
+    }
+    </script>
+</head>
+<body>
+    <!-- webサイトヘッダ－ -->
+    <header>
+        <div class="header-contents">
+            <div class="garland">
+                <img class="garland-left" src="images/garland-l.png" alt="装飾画像">
+                <img class="garland-right" src="images/garland-r.png" alt="装飾画像">
+            </div>
+            <nav id="head">
+                <!-- ヘッダーリンク -->
+                <ul>
+                    <li><a href="tag-alllist.html"><span class="header-link">Tags</span><br><span class="header-link-sub">タグから探す</span></a></li>
+                    <li><a href="index.html#map"><span class="header-link">Map</span><br><span class="header-link-sub">マップから探す</span></a></li>
+                    <li><a href="index.html"><span class="header-link">Cafe Map</span></a></li>
+                    <li><a href="about.html"><span class="header-link">About</span><br><span class="header-link-sub">このサイトについて</span></a></li>
+                    <li><a href="contact.html"><span class="header-link">Contact</span><br><span class="header-link-sub">お問い合わせ</span></a></li>
+            
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container custom-shape all-page-content">
+            <section id="breadcrumb">
+                <h1 class="page-title">Chill</h1>
+                <!-- パンくずリスト -->
+                <nav aria-label="breadcrumb" class="breadcrumb">
+                    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <!-- 1つめ -->
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="index.html">
+                                <span itemprop="name">ホーム</span>
+                            </a>
+                            <meta itemprop="position" content="1" />
+                        </li>
+                        <!-- 2つめ -->
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="tag-alllist.html">
+                                <span itemprop="name">All List</span>
+                            </a>
+                            <meta itemprop="position" content="2" />
+                        </li>
+                        <!-- 3つめ -->
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="tag-chill.html">
+                                <span itemprop="name">Chill</span>
+                            </a>
+                            <meta itemprop="position" content="3" />
+                        </li>
+                    </ol>
+                </nav>
+            </section>
+            <!-- カフェの概要ページ -->
+            <section id="main">
+                    <!--popup表示-->
+                <h1 class="page-subtitle"><a href="tag-chill.html">Chill</a></h1>
+                    <!-- popupオープンボタン -->
+                <button type="button" class="pin-button box-pop-cafe" data-id="cafe1">
+                    <img class="box-pop-cafeimg" src="images/actors.jpg" alt="カフェ1">
+                    <time datetime="2026-01-01">2026/01/01</time>
+                    <h3 class="page-description">ACTORS SQUARE COFFEE</h3>
+                </button>
+            </section>
+                            <dialog id="cafe-details" class="popup">
+                    <button type="button" class="close-button" aria-label="閉じる">×</button>
+                    <div class="content">
+                        <h1 id="popup-category">cafe</h1>
+                        <img src="" alt="" id="popup-img" style="width:100%; max-width:300px;">
+                        <h3 id="popup-name">店名</h3>
+                        <p id="popup-desc">説明文</p>
+                        <div class="info-details">
+                            <p>住所：<span id="popup-address"></span></p>
+                            <p>電話：<span id="popup-tel"></span></p>
+                            <p><a href="" id="popup-insta" target="_blank">Instagramを開く</a></p>
+                            <div id="popup-tags" style="margin-top: 15px;"></div> <!-- タグ用 -->
+                        </div>
+                        <a href="tag-alllist.html" class="back-link">リストに戻る</a>
+                    </div>
+                </dialog>
+
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Cafe Map. All rights reserved.</p>
+    </footer>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

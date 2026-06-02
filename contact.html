@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cafe Map</title>
+</head>
+<body>
+    <!-- webサイトヘッダ－ -->
+    <header>
+        <div class="header-contents">
+            <div class="garland">
+                <img class="garland-left" src="images/garland-l.png" alt="装飾画像">
+                <img class="garland-right" src="images/garland-r.png" alt="装飾画像">
+            </div>
+            <nav id="head">
+                <!-- ヘッダーリンク -->
+                <ul>
+                    <li><a href="tag-alllist.html"><span class="header-link">Tags</span><br><span class="header-link-sub">タグから探す</span></a></li>
+                    <li><a href="index.html#map"><span class="header-link">Map</span><br><span class="header-link-sub">マップから探す</span></a></li>
+                    <li><a href="index.html"><span class="header-link">Cafe Map</span></a></li>
+                    <li><a href="about.html"><span class="header-link">About</span><br><span class="header-link-sub">このサイトについて</span></a></li>
+                    <li><a href="contact.html"><span class="header-link">Contact</span><br><span class="header-link-sub">お問い合わせ</span></a></li>
+            
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="bg_pattern Polka_v2"></div>
+            <section id="contact">
+                <div class="page-content">
+                    <h1 class="page-title">Cafe Map</h1>
+                    <h2 class="page-subtitle">お問い合わせ</h2>
+                    <p class="page-description">ご質問やご意見がございましたら、以下のフォームからお気軽にお問い合わせください😌💫</p>
+                    <!-- フォーム画面 -->
+                    <form action="mail.php" method="post">
+                        <label for="name">お名前(必須)</label><br>
+                        <input type="text" placeholder="Name" name="name" required><br><br>
+                        <label for="name">メールアドレス(必須)</label><br>
+                        <input type="email" placeholder="Email" name="Email" required><br><br>
+                        <label for="message">お問い合わせ内容(必須)</label><br>
+                        <textarea id="Message" placeholder="Message" name="message" rows="5" required></textarea><br><br>
+                        <input type="submit" value="送信">
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Cafe Map. All rights reserved.</p>
+    </footer>
+</body>
+</html>

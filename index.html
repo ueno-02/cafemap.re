@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+    <!-- googleフォント -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=LINE+Seed+JP&family=Lobster&family=Pinyon+Script&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+    <!-- メタディスクリプション　検索結果の説明文 -->
+    <meta name="description" content="宮崎市内の素敵なカフェをマップとタグから簡単に探せるサイトです。あなたにぴったりの『落ち着く場所』が見つかります。">
+    
+    <!-- OGP設定 -->
+    <meta property="og:title" content="Cafe Map | 宮崎のカフェ探し">
+    <meta property="og:description" content="マップとタグで探す、あなただけのカフェ時間。">
+    <meta property="og:image" content="images/kawaiicafe.jpg">
+    <title>宮崎市　人気カフェ探し　Cafe Map</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <!-- webサイトヘッダ－ -->
+    <header>
+        <div class="header-contents">
+            <div class="garland">
+                <img class="garland-left" src="images/garland-l.png" alt="装飾画像">
+                <img class="garland-right" src="images/garland-r.png" alt="装飾画像">
+            </div>
+            <nav id="head">
+                <!-- ヘッダーリンク -->
+                <ul>
+                    <li><a href="tag-alllist.html"><span class="header-link">Tags</span><br><span class="header-link-sub">タグから探す</span></a></li>
+                    <li><a href="index.html#map"><span class="header-link">Map</span><br><span class="header-link-sub">マップから探す</span></a></li>
+                    <li><a href="index.html"><span class="header-link">Cafe Map</span></a></li>
+                    <li><a href="about.html"><span class="header-link">About</span><br><span class="header-link-sub">このサイトについて</span></a></li>
+                    <li><a href="contact.html"><span class="header-link">Contact</span><br><span class="header-link-sub">お問い合わせ</span></a></li>
+            
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- jsで動かす見出し画像 -->
+        <div id="slider"class="js">
+            <p class="text" >Discover Your<br>Next Favorite Cafe</p>
+        </div>
+
+    </header>
+    <main>
+        <div class="container">
+                <!-- 装飾画像 -->
+                <section id="about">
+                <img class="strawberry" src="images/strawberry.png" alt="いちご装飾画像">
+                <img class="bird-left" src="images/bird.png" alt="鳥の装飾画像">
+                <!-- aboutページ -->
+                    <div class="about-content fadeUpTrigger">
+                        <h1 class="ribbon-header">About</h1>
+                        <h2 class="about-h2">カフェマップサイト</h2>
+                        <a class="about-link" href="about.html">もっと見る</a>
+                        <img src="images/about.png" alt="サイトについての説明">
+                            <p class="about-p1"><strong>あなたの希望に合わせたカフェを紹介します✨</strong></p><br>
+                            <p class="about-p2">マップのアヒルピンをクリック！<br><br>
+                                気になるカフェの紹介ページに見ることができます。ぜひチェックしてみてください！<br><br>
+                                おすすめのカフェをぜひお楽しみください。素敵な思い出づくりにこのサイトが役立ちますように。</p>
+                    </div>
+                </section>
+                <!-- マップ -->
+                <section id="map">
+                    <div class="map fadeUpTrigger">
+                        <h1 class="ribbon-header">Map</h1>
+                        <div class="map-wrapper"><iframe src="https://www.google.com/maps/d/embed?mid=1CJfTZggKV4xMGuhP2Mmd6YInLTaK6yg&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
+            
+    <button type="button" class="pin-button cafe-pin" id="pin-cafe1" data-id="cafe1">
+        <img src="images/duck.png" alt="カフェ1">
+    </button>
+
+    <button type="button" class="pin-button cafe-pin" id="pin-cafe2" data-id="cafe2">
+        <img src="images/duck.png" alt="カフェ2">
+    </button>
+
+    <button type="button" class="pin-button cafe-pin" id="pin-cafe3" data-id="cafe3">
+        <img src="images/duck.png" alt="カフェ3">
+    </button>
+
+    <button type="button" class="pin-button cafe-pin" id="pin-cafe4" data-id="cafe4">
+        <img src="images/duck.png" alt="カフェ4">
+    </button>
+
+    <button type="button" class="pin-button cafe-pin" id="pin-cafe5" data-id="cafe5">
+        <img src="images/duck.png" alt="カフェ5">
+    </button>
+
+    <button type="button" class="pin-button cafe-pin" id="pin-cafe6" data-id="cafe6">
+        <img src="images/duck.png" alt="カフェ6">
+    </button>
+</div>
+</div>
+
+    <!-- 共通ダイアログ（これは今のままでOK） -->
+    <dialog id="cafe-details" class="popup">
+        <button type="button" class="close-button" aria-label="閉じる">×</button>
+        <div class="content">
+            <h1 id="popup-category">cafe</h1>
+            <img src="" alt="" id="popup-img" style="width:100%; max-width:300px;">
+            <h3 id="popup-name">店名</h3>
+            <p><strong id="popup-catchCopy"></strong></p>
+            <p id="popup-desc">説明文</p>
+            <div class="info-details">
+                <p>住所：<span id="popup-address"></span></p>
+                <p>電話：<span id="popup-tel"></span></p>
+                <p><a href="" id="popup-insta" target="_blank">Instagramを開く</a></p>
+                <p>タグ：<span id="popup-tags"></span></p>
+            </div>
+            <a href="tag-alllist.html" class="back-link">リストに戻る</a>
+        </div>
+    </dialog>
+                </section>
+                <!-- タグ -->
+                <section id="tag">
+                    <div class="tag">
+                        <div class="tag-h1">
+                            <div class="tagimage"><img src="images/strawberry2.png" alt="イチゴの装飾画像"></div>
+                            <h1 class="ribbon-header fadeUpTrigger">Tags</h1>
+                        </div>
+                        <!-- 画像左、文字右 -->
+                        <div class="tag-text">
+                            <div class="tag-img fadeUpTrigger"><img src="images/tag1.png" alt="スイーツ"></div>
+                            <div class="tag-cap fadeUpTrigger">
+                                <h4 class="tag-h4">Treats</h4>
+                                <p class="tag-textcontent cstm-box-checkered">"Indulge in a sweet escape.<br> A special treat just for you."</p>
+                                <h2 class="tags">自分への特別なご褒美に</h2>
+                                <div class="#">
+                                    <p class="hd"><strong>おいしそうなスイーツたち</strong></p>
+                                    <p class="brief">お店こだわりのスイーツを楽しむことができます。<br>ご褒美にぴったりの甘いスイーツで癒されてください。</p>
+                                    <div class="tag-content">
+                                        <h3 class="tag-h3"><a href="tag-sweets.html">#Sweets</a></h3>
+                                        <h3 class="tag-h3"><a href="tag-homemade.html">#Homemade</a></h3>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 画像右、文字左 -->
+                        <div class="tag-text tag-text-left">
+                                    <div class="tag-cap fadeUpTrigger">
+                                        <h4 class="tag-h4">Visuals</h4>
+                                        <p class="tag-textcontent cstm-box-checkered">"Picture-perfect scenes.<br>Frame your timeless memories."</p>
+                                        <h2 class="tags">シェアしたくなる特別な空間</h2>
+                                        <p class="hd"><strong>おしゃれなお店でインスタ映えを</strong></p>
+                                        <p class="brief">インスタ映えするようなおしゃれな外観、内装です。<br>
+                                            写真を通して、素敵な思い出を。</p>
+                                    
+                                        <div class="tag-content">
+                                            <h3 class="tag-h3"><a href="tag-chill.html">#Chill</a></h3>
+                                            <h3 class="tag-h3"><a href="tag-cozy.html">#Cozy</a></h3>
+                                        </div>
+                                    </div>
+                                <div class="tag-img fadeUpTrigger">
+                                   <img src="images/tag2.png" alt="カフェの外観">
+                                </div>
+                        </div>
+                        <!-- 画像左、文字右 -->
+                        <div class="tag-text">
+                            <div class="tag-img fadeUpTrigger"><img src="images/tag3.png" alt="コーヒー"></div>
+                            <div class="tag-cap fadeUpTrigger">
+                                <h4 class="tag-h4">Craft</h4>
+                                <p class="tag-textcontent cstm-box-checkered">"Masterful brews.<br> Beyond the taste of home."</p>
+                                <h2 class="tags">おうちでは味わえない職人の味</h2>
+                                <p class="hd"><strong>本格的なコーヒー</strong></p>
+                                <p class="brief">店主こだわりのコーヒーを味わうことができます。<br>
+                                    家では味わえない本格的な味わいを。
+                                </p>
+                            
+                                <div class="tag-content">
+                                    <h3 class="tag-h3"><a href="tag-coffee.html">#Coffee</a></h3>
+                                    <h3 class="tag-h3"><a href="tag-craft.html">#Craft</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <h1 class="all-list-link fadeUpTrigger"><a href="tag-alllist.html">All List</a></h1>
+                    </div>
+                </section>
+            </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Cafe Map. All rights reserved.</p>
+    </footer>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>    <!--自作のJS-->
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
