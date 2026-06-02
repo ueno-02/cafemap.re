@@ -396,9 +396,7 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 /* 既存のスタイル... */
 
 /* ヘッダーリンク色を上書き */
-header a,
-header a:link,
-header a:visited {
+a {
     color: #fff !important;
 }
 </style>
